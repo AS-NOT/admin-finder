@@ -38,10 +38,10 @@ def c(lst):
         r = requests.get(f"{url}{lst}").status_code
         if r == 200:
             print(f"{G}[+] {url}{lst} | {r}")        
-        #if r == 404:
-          #  print(f"{R}[-] {url}{lst} | {r}")
-        #else:
-            #print(f"{Y}[-] Error not found")
+        if r == 404:
+            print(f"{R}[-] {url}{lst} | {r}")
+        else:
+            print(f"{Y}[-] Error not found")
     except Exception as asxx:
         pass           
 qu = Queue()
